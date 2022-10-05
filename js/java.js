@@ -1,12 +1,27 @@
+var validacion = false;
 
-for (var i = 1; i < 101; i++) {
-    if (i % 3 == 0 && i % 5 == 0) {
-        document.write("<br/>FizzBuzz ");
-    } else if (i % 3 == 0) {
-        document.write("<br/>Fizz");
-    } else if (i % 5 == 0) {
-        document.write("<br/>Buzz");
+
+function compararCadenas() {
+
+    var cadena1 = prompt("Introducir la primera cadena?");
+
+    var arrayCadena1 = Array.from(cadena1);
+
+    arrayCadena1.sort();
+
+    var cadena2 = prompt("Introducir la segunda cadena?");
+
+    var arrayCadena2 = Array.from(cadena2);
+
+    arrayCadena2.sort();
+
+    if (arrayCadena1.toString() == arrayCadena2.toString()) {
+        validacion = true;
     } else {
-        document.write("<br/>",i);
+        validacion = false;
     }
+}
+
+function lectura() {
+    document.write(validacion);
 }
