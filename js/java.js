@@ -3,15 +3,17 @@ var validacion = false;
 
 function compararCadenas() {
 
-    var cadena1 = prompt("Introducir la primera cadena?");
+    do {
+        var cadena1 = prompt("Introducir la primera cadena?");
 
-    var arrayCadena1 = Array.from(cadena1);
+        var arrayCadena1 = Array.from(cadena1);
+
+        var cadena2 = prompt("Introducir la segunda cadena?");
+
+        var arrayCadena2 = Array.from(cadena2);
+    } while (cadena1==cadena2);
 
     arrayCadena1.sort();
-
-    var cadena2 = prompt("Introducir la segunda cadena?");
-
-    var arrayCadena2 = Array.from(cadena2);
 
     arrayCadena2.sort();
 
